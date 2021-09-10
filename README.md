@@ -35,7 +35,11 @@ Please answer the following questions below, you may edit the readme file to inc
     To prevent reusing or repeating blocks/chunks of codes in a program.
 
 5. How do you access a key inside of an object inside of an array?
-    array[0].value;
+    dot notation: 
+        object.key
+        object.method()
+    bracket notation
+        object['key']
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
