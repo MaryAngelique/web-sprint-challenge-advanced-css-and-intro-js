@@ -208,11 +208,12 @@ Practice accessing data above by console.log-ing following items:
 (no functions needed) */
 
 //(1) Name of the first artist (0th index) in the array
-console.log('task 1a', artists[0].name);
+console.log(artists[0].name);
+// Result in Chrome Console: Amedeo Modigliani
 
 //(2) Bio of the third artist (2nd index) in the array 
-console.log('task 1b', artists[0].bio);
-
+console.log(artists[0].bio);
+// Result in Chrome Console: Amedeo Modigliani's long bio
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
@@ -220,7 +221,7 @@ There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is current
 artists[8].name = "Vincent Van Gogh";
 
 console.log(artists[8].name);
-
+// Result in Chrome Console: Vincent Van Gogh
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀  
 Use getArtistByIndex to do the following:
@@ -230,11 +231,11 @@ Use getArtistByIndex to do the following:
 
 Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
-function getArtistByIndex(/*Your Code Here*/) {
-  /*Your Code Here*/
+function getArtistByIndex(array, index) {
+  return `the artist at index ${array[index].id} is ${array[index].name}`
 }
 
-
+console.log(getArtistByIndex(artists, 0));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use get20s to do the following: 
@@ -245,9 +246,25 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
-function get20s(/*Your Code Here*/) {
-  /*Your Code Here*/
+function get20s(array) {
+  let artist = [];
+
+  for (let i = 0; i < array.length; i++){
+
+    let years = array[i].years;
+    let mortality = years.split(' - ');
+
+    mortality[0] = parseInt(mortality[0]);
+    mortality[1] = parseInt(mortality[1]);
+
+
+    if (mortality[0] > 1900 && mortality[1] < 2000)
+    artist.push(array[i].name);
+  }
+
+  return artist;
 }
+
 
 
 
