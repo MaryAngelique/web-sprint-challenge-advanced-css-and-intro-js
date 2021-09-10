@@ -136,10 +136,43 @@ button:hover{
 }
 
 
-@media(max-width: 500px) {
+/* 500px */
+@media (max-width: 500px) {
+
 
     h1 {
-        font-size: 150%;
+        font-size: 250%;
     }
 
+    nav {
+        display: flex;
+    }
+
+    nav a {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 1.5rem;
+    }
+
+    nav a:hover {	
+        font-weight: bold;	
+    }	
+
+    .title-container div{
+        width: 100%;
+        height: 25rem;
+        margin-bottom: 1rem;
+    }
+
+    .artists-container {
+        display: flex;
+        flex-direction: column;
+        width: 200%;
+        margin-left: 4rem;
+    }
+
+    .artists-container img {
+        width: 15rem;
+        height: 15rem;
+    }
 }
