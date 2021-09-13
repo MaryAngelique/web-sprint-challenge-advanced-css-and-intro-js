@@ -93,6 +93,4 @@ Navigate to `index.js` and complete the MVP challenges. Note that you need to sc
 
 
 
-
-
-   
+Mary Angelique Arroyo Abacajan
